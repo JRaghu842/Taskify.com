@@ -119,13 +119,10 @@ body{
 
 }
 
-
-
 .select-btn>div{
     display: flex;
     align-items: center;
 }
-
 
 .select-btn i{
     font-size: 25px;
@@ -142,6 +139,7 @@ body{
     background: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
     display: none;
+    width: 70%;
 }
 .select-menu.active .options{
     display: block;
@@ -194,8 +192,255 @@ body{
 /* nav bar dropdown end */
 
 /* main content started-------------------------------- */
+/* main content started-------------------------------- */
+#main{
+    background: #dadbf9;
+    background: linear-gradient(180deg, #c7c5ff 0%, #dadcff 8%, #e5e7fe 45%);
+    margin-top: -40px;
+}
+
+#main>h1{
+    font-size: 52px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 40px;
+    line-height: 60px;
+}
+#main>p{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 0px;
+    padding-bottom: 40px;
+}
+
+.spanid{
+    font-weight: 700;
+}
+/* cate1--------- */
+#cate1{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 20px;
+    
+}
+
+#cate1>div>img{
+    width: 35px;
+}
+
+#cate1>div{
+    background-color: white;
+    width: 10%;
+    text-align: center;
+    border-radius: 8px;
+    padding: 14px 5px 0px 5px;
+    margin-bottom: 50px;
+    box-shadow: rgba(9, 126, 185, 0.24) 0px 3px 8px;
+}
+
+#cate1>div:hover{
+    border: 1px solid rgb(83, 1, 225);
+    border-color: rgb(83, 1, 225);
+
+}
+.getstart{
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+    border: 0px;
+    background-image: linear-gradient(to right,#0250d6 0%, #3d44c4 100%);
+    color: white;
+    display: block;
+    margin: auto;
+    font-size: medium;
+
+
+}
+
+.getstart:hover{
+    background-image: linear-gradient(to right,#033893 0%, #2110bd 100%);
+}
+
+/* cate2--------------- */
+
+#cate2{
+
+    background-color: white;
+    margin-top: 40px;
+    padding-bottom: 60px;
+}
+
+#cate2>div:nth-child(1){
+    padding-top: 40px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.spanid2{
+    font-weight: 400;
+}
+
+#card{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+
+#card>div{
+    border-radius: 8px;
+    box-shadow: rgba(9, 126, 185, 0.24) 0px 3px 8px;
+    text-align: start;
+    padding: 20px;
+    /* border: 1px solid black; */
+}
+
+#card>div>img{
+    width: 100%;
+}
+
+/* cate3------------- */
+
+#cate3{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#divbtncate3{
+    width: 60%;
+    margin: auto;
+}
+
+.btncate3{
+    padding: 12px;
+    border-radius: 15px;
+    font-size: medium;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-color:rgb(83, 1, 225);
+    border-width: 1px;
+    background-color: #eff0fd;
+}
+
+.btncate3:hover{
+    cursor: pointer;
+}
+
+#divbtncate3>button:nth-child(1){
+    color: white;
+    background-color: #2110bd;
+}
+
+#cate3img{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#cate3img>img{
+    width: 100%;
+    margin-bottom: 50px;
+    box-shadow: rgba(9, 126, 185, 0.24) 0px 3px 8px;
+
+}
+
+
+#cate4{
+    background-color: white;
+}
+
+#cate4>div{
+    padding-top: 40px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#cate4left{
+    width: 40%;
+    /* border: 1px solid black; */
+}
+
+#cate4right{
+    width: 50%;
+    /* border: 1px solid black; */
+
+}
+
+#cate4right>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+
+#cate4right img{
+    width: 100%;
+}
+
+.manyways{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(9, 126, 185, 0.24) 0px 3px 8px;
+    padding-bottom: -80px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.manyways>p{
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#cate4left div{
+ margin-top: 20px;
+}
+
+.manyways2{
+    width: 100%;
+}
+
+#cate4right>div:nth-child(1){
+    margin-top: 100px;
+    /* margin-bottom:20px ; */
+}
+
+#cate4right>div:nth-child(2){
+    margin-top: 65px;
+    margin-bottom:20px ;
+}
+
+#btngetstart{
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: white;
+}
 
 /* main content ended ------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* footer start */
 #logof{
