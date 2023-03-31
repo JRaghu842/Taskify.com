@@ -142,6 +142,7 @@ body{
     background: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
     display: none;
+    width: 70%;
 }
 .select-menu.active .options{
     display: block;
