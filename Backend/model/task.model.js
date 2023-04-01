@@ -2,14 +2,14 @@ let mongoose = require("mongoose");
 
 let taskSchema = mongoose.Schema(
   {
-    board: String,
-    task: String,
-    person_allocated: String,
-    p_email: String,
-    status: String,
-    start_date: Date,
-    end_date: Date,
-    extra: String,
+    board: { type: String, required: true },
+    task: { type: String, required: true },
+    person_allocated: { type: String, required: true },
+    p_email: { type: String, optional: true },
+    status: { type: String, optional: true },
+    start_date: { type: Date, optional: true },
+    end_date: { type: Date, optional: true },
+    extra: { type: String, optional: true },
     user: String,
   },
   {

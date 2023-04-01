@@ -1,0 +1,26 @@
+let form = document.getElementById("formcontainer");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let payload = {
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value,
+  };
+  fetch("http://localhost:8420/users/login", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      localStorage.setItem("token", res.token);
+      document.getElementById("email").value = "";
+      document.getElementById("password").value = "";
+      alert("Login Successful!");
+      window.location.href = "../index.html";
+    })
+    .catch((err) => console.log(err));
+});
