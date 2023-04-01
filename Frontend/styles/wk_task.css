@@ -4,6 +4,13 @@ body{
     padding: 0px;
     color: #303636;
 }
+#fullpage{
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    background-color: #f6f7fb;
+    }
+
 #sidenav{
     display: flex;
     flex-direction: column;
@@ -11,9 +18,12 @@ body{
     justify-content: space-between;
     gap: 20px;
     background-color: #2a2f4d;
-    width: 30%;
+    width: 5%;
     height: 100vh;
     box-shadow: rgba(103, 142, 205, 0.444) 6px 2px 16px 0px, rgba(133, 163, 197, 0.8) -6px -2px 16px 0px;
+    position: sticky;
+    top: 0px;
+    margin-right: 2%;
 }
 #sidenav p{
     color: white;
@@ -97,22 +107,328 @@ body{
 
 /* side nav ends............ */
 
-#fullpage{
-display: flex;
-align-items: start;
-justify-content: space-between;
-background-color: #f6f7fb;
+/* add and update start............ */
 
+#addNup{
+    margin: 3% 3% 3% 0%;
+    width: 15%;
 
 }
-#fullworkspace{
-    margin-right: 5%;
-    margin-left: 5%; 
+
+#add>h2{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
+
+#add{
+    box-shadow: rgba(3, 79, 232, 0.25) 0px 2px 8px 0px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 20px;
+    width: 110%;
+}
+
+#add:hover{
+    box-shadow: rgba(3, 79, 232, 0.707) 0px 2px 8px 0px;
+}
+
+
+
+#add>input{
+    width: 86%;
+    font-size: medium;
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #0073ef;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+#add>select{
+    width: 100%;
+    font-size: medium;
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #0073ef;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#add>input:nth-child(10){
+margin-top: -15px;
+}
+
+
+#add>input:nth-child(8){
+margin-top: -15px;
+}
+
+#add>input:nth-child(12){
+    width: 101%;
+    font-size: medium;
+    padding: 5px 15px;
+    margin-top: 25px;
+    border-radius: 8px;
+    border: 1px solid #303636;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color:#0073ef;
+    border-width: 0px;
+    color: white;
+}
+
+
+
+#update>h2{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#update{
+    box-shadow: rgba(3, 79, 232, 0.25) 0px 2px 8px 0px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 20px;
+    width: 110%;
+    margin-top: 50px;
+}
+
+#update:hover{
+    box-shadow: rgba(3, 79, 232, 0.707) 0px 2px 8px 0px;
+}
+
+#update>input{
+    width: 86%;
+    font-size: medium;
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #0073ef;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#update>select{
+    width: 100%;
+    font-size: medium;
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #0073ef;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#update>input:nth-child(10){
+margin-top: -15px;
+}
+
+
+#update>input:nth-child(8){
+margin-top: -15px;
+}
+
+
+#update>input:nth-child(12){
+    width: 101%;
+    font-size: medium;
+    padding: 5px 15px;
+    margin-top: 25px;
+    border-radius: 8px;
+    border: 1px solid #303636;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color:#0073ef;
+    border-width: 0px;
+    color: white;
+}
+
+
+
+
+
+
+
+/* display section start................. */
 #maincontainer{
     box-shadow: rgba(3, 79, 232, 0.25) 0px 2px 8px 0px;
     background-color: white;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+#fullworkspace{
+    margin: 1% 2% 3% 5%;
+    width: 65%;
+}
+
+/* Kanban start--------- */
+
+.card{
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+.green {
+    border: 2px solid #01c875;
+  }
+  
+  .red {
+    border: 2px solid #e2445b;
+  }
+  
+  .yellow {
+    border: 2px solid #fdab3d;
+  }
+  
+  .statusdiv-green {
+    background-color: #01c875;
+    height: 35px;
+    margin: -10px -11px 0px -11px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .statusdiv-red {
+    background-color: #e2445b;
+    height: 35px;
+    margin: -10px -11px 0px -11px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+  }
+  
+  .statusdiv-yellow {
+      background-color: #fdab3d;
+      height: 35px;
+      margin: -10px -11px 0px -11px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+  }
+ 
+ 
+.card-btn{
+    display: flex;
+    justify-content: space-around;
+}
+
+.updatebtn{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color:#0073ef;
+    border-width: 0px;
+    color: white;
+    font-size: medium;
+    padding: 5px 30px;
+}
+.deletebtn{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    border-width: 0px;
+    color: white;
+    font-size: medium;
+    padding: 5px 30px;
 
 }
+
+.spancls{
+    font-weight: 400;
+}
+
+#topbar{
+    text-align: center;
+}
+
+.ogray{
+    background-color: lightslategray;
+}
+.ogreen{
+    background-color: #01c875;
+}
+.ored{
+    background-color: #e2445b;
+}
+.oyellow{
+    background-color: #fdab3d;
+}
+
+#statid{
+    text-align: center;
+    margin-top: 0px;
+    color: white;
+    font-size: large;
+}
+
+/* Kan ban endssssss */
+
+/* Table format start......... */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+
+
+  td button.updatebtn{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color:#0073ef;
+    border-width: 0px;
+    color: white;
+    font-size: medium;
+    padding: 5px 30px;
+    margin-bottom: 10px;
+}
+
+
+  td button.deletebtn {
+    background-color: #f44336;
+    /* background-color:#0073ef; */
+    text-decoration: none;
+    border-radius: 5px;
+    border-width: 0px;
+    color: white;
+    font-size: medium;
+    padding: 5px 30px;
+    padding-right: 35px;
+  }
+
+  /* td span.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+  } */
+
+  td span.status.green {
+    background-color: #4CAF50;
+  }
+
+  td span.status.yellow {
+    background-color: #FFC107;
+  }
+
+  td span.status.red {
+    background-color: #f44336;
+  }

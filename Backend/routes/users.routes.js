@@ -21,7 +21,9 @@ userRouter.post("/register", async (req, res) => {
           account_name,
         });
         await user.save();
-        res.status(200).send({ msg: "Registration Successful" });
+        res
+          .status(200)
+          .send({ msg: "Registration Successful", fname: full_name });
       });
     } catch (error) {
       res

@@ -37,15 +37,64 @@
                 <i class="fa-regular fa-user" style="color: #ffffff;"></i>
             </div>
         </div>
+        <div id="addNup">
+            <form id="add">
+                <h2>Add new Task</h2>
+                <input type="text" id="board" placeholder="Enter board name">
+                <input type="text" id="task" placeholder="Enter task name">
+                <input type="text" id="person_allocated" placeholder="Enter name of person">
+                <input type="text" id="p_email" placeholder="Enter person's email">
+                <select  id="status">
+                    <option class="ogray" value="">Status of task</option>
+                    <option class="ogreen" value="completed">Completed</option>
+                    <option class="oyellow" value="in_progress">In progress</option>
+                    <option class="ored" value="stuck">Stuck</option>
+                </select>
+                <p>Start date</p>
+                <input type="date" id="start_date" placeholder="Enter start date">
+                <p>End date</p>
+                <input type="date" id="end_date" placeholder="Enter end date">
+                <input type="text" id="extra" placeholder="Any extra info or comments..">
+                <input type="submit" id="submit" value="Add">
+            </form>
+
+
+            <form id="update">
+                <h2>Update Task</h2>
+                <input type="text" id="up_board" placeholder="Enter board name">
+                <input type="text" id="up_task" placeholder="Enter task name">
+                <input type="text" id="up_person_allocated" placeholder="Enter name of person">
+                <input type="text" id="up_p_email" placeholder="Enter person's email">
+                <select  id="up_status">
+                    <option class="ogray" value="">Status of task</option>
+                    <option class="ogreen" value="completed">Completed</option>
+                    <option class="oyellow" value="in_progress">In progress</option>
+                    <option class="ored" value="stuck">Stuck</option>
+                </select>
+                <p>Start date</p>
+                <input type="date" id="up_start_date" placeholder="Enter start date">
+                <p>End date</p>
+                <input type="date" id="up_end_date" placeholder="Enter end date">
+                <input type="text" id="up_extra" placeholder="Any extra info or comments..">
+                <input type="submit" id="up_submit" value="Update">
+            </form>
+        </div>
+
+
 
         <div id="fullworkspace">
-            <h2>Plan all you tasks here................... </h2>
+
+            <div id="topbar">
+                <h2><span class="spancls"> All your</span>  Boards <span class="spancls">  and </span> Tasks </h2>
+                <div id="dataforms">
+                    <button id="kanban">Kanban</button>
+                    <button id="Table">Table</button>
+                    <button id="Gantt"></button>
+                </div>
+            </div>
+
+
             <div id="maincontainer">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum vitae veniam natus dolor tempore id, suscipit optio ducimus temporibus est, dolorum iure incidunt et repellendus minus, explicabo adipisci totam voluptatem.
-                Fuga accusamus illo minima voluptatem saepe dicta, ab, quia cupiditate ut repellat, eius beatae quo delectus! Necessitatibus aspernatur laboriosam quia culpa a praesentium, explicabo quam voluptas ex illum dolore itaque.
-                Quibusdam molestiae provident vero sunt modi at harum vitae ipsum repudiandae aut, fuga minima. Consequuntur error nesciunt ratione earum. Asperiores consequuntur odio enim voluptatem obcaecati vel quis quia. Dolorem, vitae?
-                Nesciunt labore optio soluta magni, possimus modi cumque iste ab consequatur repudiandae quas dolore quo sapiente! Exercitationem unde ullam delectus aliquam eveniet officiis molestias quia. Reiciendis dolorum voluptatibus voluptates illum?
-                Voluptatem odio animi, natus nesciunt provident error eum commodi blanditiis ratione excepturi odit consequatur alias expedita sit debitis adipisci soluta reprehenderit aperiam. Sequi repudiandae nemo eos rem, incidunt odit quidem?</p>
             </div>
         </div>
 </div>
