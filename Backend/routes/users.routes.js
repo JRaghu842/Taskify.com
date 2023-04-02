@@ -21,9 +21,7 @@ userRouter.post("/register", async (req, res) => {
           account_name,
         });
         await user.save();
-        res
-          .status(200)
-          .send({ msg: "Registration Successful", fname: full_name });
+        res.status(200).send({ msg: "Registration Successful" });
       });
     } catch (error) {
       res
@@ -44,6 +42,7 @@ userRouter.post("/login", async (req, res) => {
           res.status(200).send({
             msg: "Login successful",
             token: jwt.sign({ userID: user[0]._id }, "monday"),
+            email: user[0].email,
           });
         } else {
           res.status(400).send({ msg: "wrong Password" });

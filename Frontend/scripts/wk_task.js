@@ -480,3 +480,17 @@ let Pie = document.getElementById("pie");
 Pie.addEventListener("click", () => {
   window.location.href = "../pages/wk_task_pie.html";
 });
+
+let hmpgredirect = document.getElementById("hmpgredirect");
+
+hmpgredirect.addEventListener("click", () => {
+  window.location.href = "../index.html";
+});
+
+let logout = document.getElementById("logout");
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("email");
+  window.location.href = "../index.html";
+});

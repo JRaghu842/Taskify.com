@@ -15,12 +15,17 @@ form.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
-      localStorage.setItem("token", res.token);
-      document.getElementById("email").value = "";
-      document.getElementById("password").value = "";
-      alert("Login Successful!");
-      window.location.href = "../index.html";
+      if (!res.token) {
+        alert("Wrong login Credentials");
+      } else {
+        console.log(res);
+        localStorage.setItem("token", res.token);
+        localStorage.setItem("email", res.email);
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        alert("Login Successful!");
+        window.location.href = "../index.html";
+      }
     })
     .catch((err) => console.log(err));
 });
