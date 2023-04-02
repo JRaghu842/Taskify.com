@@ -493,6 +493,8 @@ Pie.addEventListener("click", () => {
   window.location.href = "../pages/wk_task_pie.html";
 });
 
+let hmpgredirect = document.getElementById("hmpgredirect");
+
 hmpgredirect.addEventListener("click", () => {
   window.location.href = "../index.html";
 });

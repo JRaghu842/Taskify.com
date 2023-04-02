@@ -22,6 +22,8 @@ Pie.addEventListener("click", () => {
   window.location.href = "../pages/wk_task_pie.html";
 });
 
+// start---------------------------
+
 function createChart() {
   fetch("https://zany-lime-swordfish-cuff.cyclic.app/tasks", {
     headers: {
@@ -31,7 +33,7 @@ function createChart() {
     .then((res) => res.json())
     .then((data) => {
       const labels = ["completed", "in_progress", "stuck"];
-      const tasks = data.tasks; // accessing the tasks array
+      const tasks = data.tasks;
       const counts = [
         tasks.filter((task) => task.status == "completed").length,
         tasks.filter((task) => task.status == "in_progress").length,
@@ -75,6 +77,10 @@ function createChart() {
     });
 }
 createChart();
+
+//  end--------------------------
+
+let hmpgredirect = document.getElementById("hmpgredirect");
 
 hmpgredirect.addEventListener("click", () => {
   window.location.href = "../index.html";
