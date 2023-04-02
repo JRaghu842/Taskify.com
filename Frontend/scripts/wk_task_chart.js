@@ -23,7 +23,6 @@ Pie.addEventListener("click", () => {
 });
 
 // start-----------------------------------
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>;
 
 function createChart() {
   fetch("https://zany-lime-swordfish-cuff.cyclic.app/tasks", {
@@ -92,6 +91,6 @@ let logout = document.getElementById("logout");
 logout.addEventListener("click", () => {
   localStorage.removeItem("token");
   localStorage.removeItem("email");
-  alert("Login Successful");
+  alert("Logout Successful");
   window.location.href = "../index.html";
 });

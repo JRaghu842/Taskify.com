@@ -409,12 +409,7 @@ body{
     margin-top: 50px;
 }
 
-#cate4sub2>div>video{
-    width: 90%;
-    border-radius: 8px;
-    box-shadow: rgba(3, 79, 232, 0.25) 0px 4px 16px, rgba(3, 79, 232, 0.25) 0px 8px 24px, rgba(9, 80, 233, 0.12) 0px 16px 56px;
-    margin-left: 10%;
-}
+
 
 #cate4sub2 h2{
     color: rgb(83, 1, 225);
@@ -580,5 +575,11 @@ body{
     cursor: pointer;
 }
 
-
 /* footer ended */
+
+#first_board{
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: rgba(3, 79, 232, 0.25) 0px 4px 16px, rgba(3, 79, 232, 0.25) 0px 8px 24px, rgba(9, 80, 233, 0.12) 0px 16px 56px;
+    margin-left: 10%;
+}
