@@ -46,7 +46,7 @@ let getData = () => {
     .then((res) => {
       console.log(res);
       let arr = res.tasks;
-      let disp = displayData(arr);
+      let disp = displayDatatab(arr);
       container.innerHTML = disp;
       updateUser();
       deleteUser();
@@ -55,111 +55,111 @@ let getData = () => {
 };
 getData();
 
-function displayData(data) {
-  // data.sort((a, b) => {
-  //   const order = ["stuck", "in_progress", "completed"];
-  //   return order.indexOf(a.status) - order.indexOf(b.status);
-  // });
-
-  let ans = data.map((el, i) => {
-    let startDate = new Date(el.start_date).toLocaleDateString();
-    let endDate = new Date(el.end_date).toLocaleDateString();
-    let cardClass = "";
-    let statusDivClass = "";
-    switch (el.status) {
-      case "completed":
-        cardClass = "kgreen";
-        statusDivClass = "statusdiv-green";
-        break;
-      case "stuck":
-        cardClass = "kred";
-        statusDivClass = "statusdiv-red";
-        break;
-      case "in_progress":
-        cardClass = "kyellow";
-        statusDivClass = "statusdiv-yellow";
-        break;
-    }
-    return `<div class="card ${cardClass}">
-                    <div id="statusdiv" class="${statusDivClass}">
-                      <p id = "statid">${el.status}</p>
-                    </div>
-                    <h4> Board name: ${el.board}</h4>
-                    <p> Task name: ${el.task}</p>
-                    <p> Person: ${el.person_allocated}</p>
-                    <p> P Email: ${el.p_email}</p>
-                    <p> Start date: ${startDate}</p>
-                    <p> End date: ${endDate}</p>
-                    <p> comments: ${el.extra}</p>
-                    <div class="card-btn">
-                        <button class="updatebtn" data-id=${el._id}> Update</button>
-                        <button class="deletebtn" data-id=${el._id}> Delete</button>
-                    </div>
-                </div>`;
-  });
-  return ans.join(" ");
-}
-
-// table format.......................//
-
-// function displayDatatab(data) {
+// function displayData(data) {
 //   data.sort((a, b) => {
 //     const order = ["stuck", "in_progress", "completed"];
 //     return order.indexOf(a.status) - order.indexOf(b.status);
 //   });
 
-//   let tableRows = data.map((el, i) => {
+//   let ans = data.map((el, i) => {
 //     let startDate = new Date(el.start_date).toLocaleDateString();
 //     let endDate = new Date(el.end_date).toLocaleDateString();
-//     let statusClass = "";
+//     let cardClass = "";
+//     let statusDivClass = "";
 //     switch (el.status) {
 //       case "completed":
-//         statusClass = "tgreen";
+//         cardClass = "kgreen";
+//         statusDivClass = "statusdiv-green";
 //         break;
 //       case "stuck":
-//         statusClass = "tred";
+//         cardClass = "kred";
+//         statusDivClass = "statusdiv-red";
 //         break;
 //       case "in_progress":
-//         statusClass = "tyellow";
+//         cardClass = "kyellow";
+//         statusDivClass = "statusdiv-yellow";
 //         break;
 //     }
-//     return `<tr>
-//                 <td>${el.board}</td>
-//                 <td>${el.task}</td>
-//                 <td>${el.person_allocated}</td>
-//                 <td>${el.p_email}</td>
-//                 <td>${startDate}</td>
-//                 <td>${endDate}</td>
-//                 <td class="${statusClass}">${el.status}</td>
-//                 <td>${el.extra}</td>
-//                 <td>
-//                   <button class="updatebtn" data-id=${el._id}>Update</button>
-//                   <button class="deletebtn" data-id=${el._id}>Delete</button>
-//                 </td>
-//               </tr>`;
+//     return `<div class="card ${cardClass}">
+//                     <div id="statusdiv" class="${statusDivClass}">
+//                       <p id = "statid">${el.status}</p>
+//                     </div>
+//                     <h4> Board name: ${el.board}</h4>
+//                     <p> Task name: ${el.task}</p>
+//                     <p> Person: ${el.person_allocated}</p>
+//                     <p> P Email: ${el.p_email}</p>
+//                     <p> Start date: ${startDate}</p>
+//                     <p> End date: ${endDate}</p>
+//                     <p> comments: ${el.extra}</p>
+//                     <div class="card-btn">
+//                         <button class="updatebtn" data-id=${el._id}> Update</button>
+//                         <button class="deletebtn" data-id=${el._id}> Delete</button>
+//                     </div>
+//                 </div>`;
 //   });
-
-//   return `<table>
-//               <thead>
-//                 <tr>
-//                   <th>Board</th>
-//                   <th>Task</th>
-//                   <th>Person</th>
-//                   <th>P Email</th>
-//                   <th>Start date</th>
-//                   <th>End date</th>
-//                   <th>Status</th>
-//                   <th>Comments</th>
-//                   <th>Actions</th>
-//                 </tr>
-//               </thead>
-//               <tbody>
-//                 ${tableRows.join("")}
-//               </tbody>
-//             </table>`;
+//   return ans.join(" ");
 // }
 
-// // table format end-------------------//
+// table format.......................//
+
+function displayDatatab(data) {
+  // data.sort((a, b) => {
+  //   const order = ["stuck", "in_progress", "completed"];
+  //   return order.indexOf(a.status) - order.indexOf(b.status);
+  // });
+
+  let tableRows = data.map((el, i) => {
+    let startDate = new Date(el.start_date).toLocaleDateString();
+    let endDate = new Date(el.end_date).toLocaleDateString();
+    let statusClass = "";
+    switch (el.status) {
+      case "completed":
+        statusClass = "tgreen";
+        break;
+      case "stuck":
+        statusClass = "tred";
+        break;
+      case "in_progress":
+        statusClass = "tyellow";
+        break;
+    }
+    return `<tr>
+                <td>${el.board}</td>
+                <td>${el.task}</td>
+                <td>${el.person_allocated}</td>
+                <td>${el.p_email}</td>
+                <td>${startDate}</td>
+                <td>${endDate}</td>
+                <td class="${statusClass}">${el.status}</td>
+                <td>${el.extra}</td>
+                <td>
+                  <button class="updatebtn" data-id=${el._id}>Update</button>
+                  <button class="deletebtn" data-id=${el._id}>Delete</button>
+                </td>
+              </tr>`;
+  });
+
+  return `<table>
+              <thead>
+                <tr>
+                  <th>Board</th>
+                  <th>Task</th>
+                  <th>Person</th>
+                  <th>P Email</th>
+                  <th>Start date</th>
+                  <th>End date</th>
+                  <th>Status</th>
+                  <th>Comments</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tableRows.join("")}
+              </tbody>
+            </table>`;
+}
+
+// table format end-------------------//
 
 // get-perticular update - update update
 
@@ -257,10 +257,10 @@ function deleteUser() {
   }
 }
 
-let Table = document.getElementById("Table");
+let Kanban = document.getElementById("kanban");
 
-Table.addEventListener("click", () => {
-  window.location.href = "../pages/wk_task_tab.html";
+Kanban.addEventListener("click", () => {
+  window.location.href = "../pages/wk_task.html";
 });
 
 // filter by board -------------------//
@@ -281,7 +281,7 @@ formA.addEventListener("submit", (e) => {
     .then((res) => {
       console.log(res);
       let arr = res.tasks;
-      let disp = displayData(arr);
+      let disp = displayDatatab(arr);
       container.innerHTML = disp;
     })
     .catch((err) => {
@@ -307,7 +307,7 @@ formB.addEventListener("submit", (e) => {
     .then((res) => {
       console.log(res);
       let arr = res.tasks;
-      let disp = displayData(arr);
+      let disp = displayDatatab(arr);
       container.innerHTML = disp;
     })
     .catch((err) => {
@@ -333,7 +333,7 @@ filterByStatus.addEventListener("change", () => {
       .then((res) => {
         console.log(res);
         let arr = res.tasks;
-        let disp = displayData(arr);
+        let disp = displayDatatab(arr);
         container.innerHTML = disp;
       })
       .catch((err) => {
@@ -360,7 +360,7 @@ formC.addEventListener("submit", (e) => {
     .then((res) => {
       console.log(res);
       let arr = res.tasks;
-      let disp = displayData(arr);
+      let disp = displayDatatab(arr);
       container.innerHTML = disp;
     })
     .catch((err) => {
@@ -392,7 +392,7 @@ sortByStatus.addEventListener("change", () => {
           const order = ["stuck", "in_progress", "completed"];
           return order.indexOf(a.status) - order.indexOf(b.status);
         });
-        let disp = displayData(arr);
+        let disp = displayDatatab(arr);
         containersortSts.innerHTML = disp;
       })
       .catch((err) => console.log(err));
@@ -412,7 +412,7 @@ sortByStatus.addEventListener("change", () => {
           const order = ["completed", "in_progress", "stuck"];
           return order.indexOf(a.status) - order.indexOf(b.status);
         });
-        let disp = displayData(arr);
+        let disp = displayDatatab(arr);
         containersortSts.innerHTML = disp;
       })
       .catch((err) => console.log(err));
@@ -438,7 +438,7 @@ sortByStartdate.addEventListener("change", () => {
       .then((res) => {
         console.log(res);
         let arr = res.tasks;
-        let disp = displayData(arr);
+        let disp = displayDatatab(arr);
         container.innerHTML = disp;
       })
       .catch((err) => {
@@ -454,7 +454,7 @@ sortByStartdate.addEventListener("change", () => {
       .then((res) => {
         console.log(res);
         let arr = res.tasks;
-        let disp = displayData(arr);
+        let disp = displayDatatab(arr);
         container.innerHTML = disp;
       })
       .catch((err) => {

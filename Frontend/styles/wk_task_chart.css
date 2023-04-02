@@ -107,7 +107,6 @@ body{
 }
 
 /* side nav ends............ */
-
 /* add and update start............ */
 
 #addNup{
@@ -245,16 +244,13 @@ margin-top: -15px;
     color: white;
 }
 
-
 /* display section start................. */
 .maincontainer{
     box-shadow: rgba(3, 79, 232, 0.25) 0px 2px 8px 0px;
     background-color: white;
     border-radius: 8px;
-    padding: 20px 20px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    display: block;
+    margin: auto;
 }
 
 #fullworkspace{
@@ -262,166 +258,7 @@ margin-top: -15px;
     width: 70%;
 }
 
-/* Kanban start--------- */
 
-.card{
-    padding: 10px;
-    padding-bottom: 20px;
-    border-radius: 8px;
-}
-
- .kgreen {
-    border: 2px solid #01c875;
-  }
-  
- .kred {
-    border: 2px solid #e2445b;
-  }
-  
- .kyellow {
-    border: 2px solid #fdab3d;
-  }
-  
-  .statusdiv-green {
-    background-color: #01c875;
-    height: 35px;
-    margin: -10px -11px 0px -11px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  
-  .statusdiv-red {
-    background-color: #e2445b;
-    height: 35px;
-    margin: -10px -11px 0px -11px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    
-  }
-  
-  .statusdiv-yellow {
-      background-color: #fdab3d;
-      height: 35px;
-      margin: -10px -11px 0px -11px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-  }
- 
- 
-.card-btn{
-    display: flex;
-    justify-content: space-around;
-}
-
-.updatebtn{
-    text-decoration: none;
-    border-radius: 5px;
-    background-color:#0073ef;
-    border-width: 0px;
-    color: white;
-    font-size: medium;
-    padding: 5px 20px;
-}
-.deletebtn{
-    text-decoration: none;
-    border-radius: 5px;
-    background-color:#0073ef;
-    border-width: 0px;
-    color: white;
-    font-size: medium;
-    padding: 5px 20px;
-
-}
-
-.spancls{
-    font-weight: 400;
-}
-
-#topbar{
-    text-align: center;
-}
-
-.ogray{
-    background-color: lightslategray;
-}
-.ogreen{
-    background-color: rgb(1, 200, 117);
-}
-.ored{
-    background-color: rgb(226, 68, 91);
-}
-.oyellow{
-    background-color: rgb(253, 171, 61);
-}
-
-#statid{
-    text-align: center;
-    margin-top: 0px;
-    color: white;
-    font-size: large;
-}
-
-/* Kan ban endssssss */
-
-/* Table format start......... */
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 10px;
-
-  }
-  
-  th,
-  td {
-    text-align: left;
-    padding: 10px;
-    border: 2px solid #ddd;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-    text-align: center;
-  }
-  
-  td button.updatebtn {
-    text-decoration: none;
-    border-radius: 5px;
-    background-color: #0073ef;
-    border-width: 0px;
-    color: white;
-    font-size: medium;
-    padding: 5px 30px;
-    margin-bottom: 10px;
-  }
-  
-  td button.deletebtn {
-    background-color: #0073ef;
-    text-decoration: none;
-    border-radius: 5px;
-    border-width: 0px;
-    color: white;
-    font-size: medium;
-    padding: 5px 30px;
-    padding-right: 35px;
-  }
-  
-  .tgreen {
-    background-color: #4caf50;
-    text-align: center !important;
-  }
-  
-  .tyellow {
-    background-color: #ffc107;
-    text-align: center !important;
-  }
-  
-  .tred {
-    background-color: #f44336;
-    text-align: center !important;
-  }
-
-  /* Table format end........ */
 
   #dataforms{
     box-shadow: rgba(3, 79, 232, 0.25) 0px 2px 8px 0px;
@@ -450,7 +287,6 @@ margin-top: -15px;
     font-size: medium;
     color: #303636;
   }
-
 
   .topbtns:nth-child(3){
     padding: 6px 16px;
@@ -505,4 +341,23 @@ margin-top: -15px;
     background-color: #79baff;
     color: #303636;
     margin-left: 10px;
+}
+
+.spancls{
+    font-weight: 400;
+}
+
+#topbar{
+    text-align: center;
+}
+
+
+#myChart{
+    box-shadow: rgba(3, 79, 232, 0.25) 0px 2px 8px 0px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 20px;
+    width: 70% !important;
+    height: 460px !important;
+    margin: auto;
 }

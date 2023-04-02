@@ -1,6 +1,7 @@
 let express = require("express");
 let app = express();
 let cors = require("cors");
+let chartjs = require("chart.js");
 require("dotenv").config();
 
 const { connection } = require("./db");
