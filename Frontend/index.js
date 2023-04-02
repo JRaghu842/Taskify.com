@@ -31,11 +31,22 @@ wk_mngt4.addEventListener("click", () => {
 let hreflink = document.getElementById("hrefLogin");
 console.log(hreflink);
 
-let userName = localStorage.getItem("fname");
-console.log(userName);
+let useremail = localStorage.getItem("email");
+console.log(useremail);
 
-if (userName) {
-  hreflink.innerText = userName;
+if (useremail) {
+  const Uname = useremail.substring(0, useremail.indexOf("@"));
+  console.log(Uname);
+
+  hreflink.innerText = Uname;
 }
 
 // username show in navbar over
+
+let logout = document.getElementById("logout");
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("email");
+  window.location.href = "index.html";
+});

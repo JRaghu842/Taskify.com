@@ -241,10 +241,9 @@ body{
 }
 
 #cate1>div:hover{
-    border: 1px solid rgb(83, 1, 225);
-    border-color: rgb(83, 1, 225);
-
+    box-shadow: rgba(1, 22, 62, 0.25) 0px 4px 16px, rgba(3, 79, 232, 0.25) 0px 8px 24px, rgba(9, 80, 233, 0.12) 0px 16px 56px;
 }
+
 .getstart{
     padding: 10px 30px 10px 30px;
     border-radius: 20px;
@@ -509,10 +508,25 @@ body{
 
 #footerbottum>div:nth-child(2){
     width: 35%;
+    display: flex;
     text-align: center;
+    /* border: 1px solid black; */
+
 }
 #footerbottum>div:nth-child(2)>img{
     margin-left: 20px;
     width: 30%;
+}
+
+#logout{
+    padding: 15px 35px;
+    margin-left: 30px;
+    border-radius: 8px;
+    font-size: large;
+    box-shadow: rgba(1, 22, 62, 0.25) 0px 4px 16px, rgba(3, 79, 232, 0.25) 0px 8px 24px, rgba(9, 80, 233, 0.12) 0px 16px 56px;
+}
+
+#logout:hover{
+    cursor: pointer;
 }
 /* footer ended */
