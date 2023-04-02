@@ -50,3 +50,6 @@ logout.addEventListener("click", () => {
   localStorage.removeItem("email");
   window.location.href = "index.html";
 });
+
+// backend deployed url
+// https://zany-lime-swordfish-cuff.cyclic.app/
