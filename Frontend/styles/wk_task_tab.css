@@ -252,9 +252,8 @@ margin-top: -15px;
     background-color: white;
     border-radius: 8px;
     padding: 20px 20px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    display: block;
+    margin: auto;
 }
 
 #fullworkspace{
@@ -345,13 +344,13 @@ margin-top: -15px;
     background-color: lightslategray;
 }
 .ogreen{
-    background-color: rgb(1, 200, 117);
+    background-color: #01c875;
 }
 .ored{
-    background-color: rgb(226, 68, 91);
+    background-color: #e2445b;
 }
 .oyellow{
-    background-color: rgb(253, 171, 61);
+    background-color: #fdab3d;
 }
 
 #statid{
@@ -374,14 +373,26 @@ margin-top: -15px;
   
   th,
   td {
-    text-align: left;
+    text-align: start;
     padding: 10px;
     border: 2px solid #ddd;
+  }
+
+  td:nth-child(7){
+    text-align: center;
+  }
+
+  td:nth-child(9){
+    text-align: center;
   }
   
   th {
     background-color: #f2f2f2;
     text-align: center;
+  }
+
+  .card-btn{
+    display: flex;
   }
   
   td button.updatebtn {
@@ -391,7 +402,8 @@ margin-top: -15px;
     border-width: 0px;
     color: white;
     font-size: medium;
-    padding: 5px 30px;
+    padding: 5px 15px;
+    margin: auto;
     margin-bottom: 10px;
   }
   
@@ -402,8 +414,8 @@ margin-top: -15px;
     border-width: 0px;
     color: white;
     font-size: medium;
-    padding: 5px 30px;
-    padding-right: 35px;
+    padding: 5px 15px;
+    /* padding-right: 35px; */
   }
   
   .tgreen {
@@ -450,7 +462,6 @@ margin-top: -15px;
     font-size: medium;
     color: #303636;
   }
-
 
   .topbtns:nth-child(3){
     padding: 6px 16px;
@@ -506,3 +517,8 @@ margin-top: -15px;
     color: #303636;
     margin-left: 10px;
 }
+
+
+
+
+  
