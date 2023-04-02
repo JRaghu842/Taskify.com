@@ -26,26 +26,3 @@ app.listen(process.env.port, async () => {
   }
   console.log(`Server is live at port ${process.env.port}`);
 });
-
-// {
-//   "email": "varun@123",
-//   "password": "varun123",
-//   "full_name": "Varun",
-//   "account_name": "VR"
-// }
-
-// {
-//   "email": "varun@123",
-//   "password": "varun123"
-// }
-
-// {
-//   "board": "today's schedule",
-//   "task": "nxm101class",
-//   "person_allocated": "varun",
-//   "p_email": "varun@123",
-//   "status": "working",
-//   "start_date": "2022-10-25",
-//   "end_date": "2022-10-26",
-//   "extra": "attendance compulsory"
-// }

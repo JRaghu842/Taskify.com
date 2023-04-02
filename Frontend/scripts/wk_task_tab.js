@@ -15,7 +15,7 @@ form1.addEventListener("submit", (e) => {
     extra: document.getElementById("extra").value,
   };
 
-  fetch("http://localhost:8420/tasks/add", {
+  fetch("https://zany-lime-swordfish-cuff.cyclic.app/tasks/add", {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -37,7 +37,7 @@ form1.addEventListener("submit", (e) => {
 let container = document.getElementById("maincontainer");
 
 let getData = () => {
-  fetch("http://localhost:8420/tasks", {
+  fetch("https://zany-lime-swordfish-cuff.cyclic.app/tasks", {
     headers: {
       Authorization: localStorage.getItem("token"),
     },
@@ -169,7 +169,7 @@ function updateUser() {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       let id = e.target.dataset.id;
-      fetch(`http://localhost:8420/tasks/${id}`, {
+      fetch(`https://zany-lime-swordfish-cuff.cyclic.app/tasks/${id}`, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -214,7 +214,7 @@ function updatefn() {
     extra: document.getElementById("up_extra").value,
   };
   let idt = document.getElementById("idt").innerText;
-  fetch(`http://localhost:8420/tasks/update/${idt}`, {
+  fetch(`https://zany-lime-swordfish-cuff.cyclic.app/tasks/update/${idt}`, {
     method: "PATCH",
     headers: {
       "content-type": "application/json",
@@ -239,7 +239,7 @@ function deleteUser() {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       let id = e.target.dataset.id;
-      fetch(`http://localhost:8420/tasks/delete/${id}`, {
+      fetch(`https://zany-lime-swordfish-cuff.cyclic.app/tasks/delete/${id}`, {
         method: "delete",
         headers: {
           Authorization: localStorage.getItem("token"),
@@ -272,7 +272,7 @@ formA.addEventListener("submit", (e) => {
 
   let fboard = document.getElementById("filterBoard").value;
 
-  fetch(`http://localhost:8420/tasks?board=${fboard}`, {
+  fetch(`https://zany-lime-swordfish-cuff.cyclic.app/tasks?board=${fboard}`, {
     headers: {
       Authorization: localStorage.getItem("token"),
     },
@@ -298,11 +298,14 @@ formB.addEventListener("submit", (e) => {
 
   let fname = document.getElementById("filtername").value;
 
-  fetch(`http://localhost:8420/tasks?person_allocated=${fname}`, {
-    headers: {
-      Authorization: localStorage.getItem("token"),
-    },
-  })
+  fetch(
+    `https://zany-lime-swordfish-cuff.cyclic.app/tasks?person_allocated=${fname}`,
+    {
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    }
+  )
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
@@ -324,11 +327,14 @@ filterByStatus.addEventListener("change", () => {
   if (filterByStatusV == "") {
     getData();
   } else {
-    fetch(`http://localhost:8420/tasks?status=${filterByStatusV}`, {
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-    })
+    fetch(
+      `https://zany-lime-swordfish-cuff.cyclic.app/tasks?status=${filterByStatusV}`,
+      {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -349,7 +355,7 @@ formC.addEventListener("submit", (e) => {
   e.preventDefault();
   let fsearch = document.getElementById("search").value;
   fetch(
-    `http://localhost:8420/tasks?search=${fsearch}&fields=person_allocated,board,task,p_email`,
+    `https://zany-lime-swordfish-cuff.cyclic.app/tasks?search=${fsearch}&fields=person_allocated,board,task,p_email`,
     {
       headers: {
         Authorization: localStorage.getItem("token"),
@@ -379,7 +385,7 @@ sortByStatus.addEventListener("change", () => {
   } else if (sortByStatusValue == "lowToHigh") {
     let containersortSts = document.getElementById("maincontainer");
 
-    fetch("http://localhost:8420/tasks", {
+    fetch("https://zany-lime-swordfish-cuff.cyclic.app/tasks", {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -399,7 +405,7 @@ sortByStatus.addEventListener("change", () => {
   } else if (sortByStatusValue == "HighToLow") {
     let containersortSts = document.getElementById("maincontainer");
 
-    fetch("http://localhost:8420/tasks", {
+    fetch("https://zany-lime-swordfish-cuff.cyclic.app/tasks", {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -429,11 +435,14 @@ sortByStartdate.addEventListener("change", () => {
   if (sortByStartdateV == "") {
     getData();
   } else if (sortByStartdateV == "lowToHighSD") {
-    fetch(`http://localhost:8420/tasks?sortbyasc=start_date`, {
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-    })
+    fetch(
+      `https://zany-lime-swordfish-cuff.cyclic.app/tasks?sortbyasc=start_date`,
+      {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -445,11 +454,14 @@ sortByStartdate.addEventListener("change", () => {
         console.log(err);
       });
   } else if (sortByStartdateV == "HighToLowSD") {
-    fetch(`http://localhost:8420/tasks?sortbydesc=start_date`, {
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-    })
+    fetch(
+      `https://zany-lime-swordfish-cuff.cyclic.app/tasks?sortbydesc=start_date`,
+      {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -490,5 +502,6 @@ let logout = document.getElementById("logout");
 logout.addEventListener("click", () => {
   localStorage.removeItem("token");
   localStorage.removeItem("email");
+  alert("Login Successful");
   window.location.href = "../index.html";
 });

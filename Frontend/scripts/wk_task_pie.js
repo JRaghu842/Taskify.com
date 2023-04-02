@@ -23,7 +23,7 @@ Pie.addEventListener("click", () => {
 });
 
 function createChart() {
-  fetch("http://localhost:8420/tasks", {
+  fetch("https://zany-lime-swordfish-cuff.cyclic.app/tasks", {
     headers: {
       Authorization: localStorage.getItem("token"),
     },
@@ -85,5 +85,6 @@ let logout = document.getElementById("logout");
 logout.addEventListener("click", () => {
   localStorage.removeItem("token");
   localStorage.removeItem("email");
+  alert("Login Successful");
   window.location.href = "../index.html";
 });

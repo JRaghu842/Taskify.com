@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
     account_name: document.getElementById("accountname").value,
   };
 
-  fetch("http://localhost:8420/users/register", {
+  fetch("https://zany-lime-swordfish-cuff.cyclic.app/users/register", {
     method: "POST",
     headers: {
       "content-type": "application/json",
