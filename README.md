@@ -41,11 +41,29 @@ Taskify has ability to store all data in the cloud, allowing users to access the
 ## This is how Website looks like
 
 - Home page/Landing page
-![alt text](https://github.com/JRaghu842/offbeat-jeans-3946/blob/main/images/taupe-raindrop-61fc2e.netlify.app_.jpg)
+
+![alt text](https://github.com/JRaghu842/safe-drain-4510/blob/main/Frontend/images/footer/Frontend_index.html.png)
+
+- Login and Register pages
+
+![alt text](https://github.com/JRaghu842/safe-drain-4510/blob/main/Frontend/images/footer/login.html.png)
+---
+![alt text](https://github.com/JRaghu842/safe-drain-4510/blob/main/Frontend/images/footer/register.html.png)
 
 
+- Kanban/card format data display page
 
+![alt text](https://github.com/JRaghu842/safe-drain-4510/blob/main/Frontend/images/footer/wk_task.html.png)
 
+- Table format data display page
 
+![alt text](https://github.com/JRaghu842/safe-drain-4510/blob/main/Frontend/images/footer/table.html.png)
 
+- Gantt chart format data display page
+
+![alt text](https://github.com/JRaghu842/safe-drain-4510/blob/main/Frontend/images/footer/chart.html.png)
+
+- Pie chart format data display page
+
+![alt text](https://github.com/JRaghu842/safe-drain-4510/blob/main/Frontend/images/footer/pie.html.png)
 
