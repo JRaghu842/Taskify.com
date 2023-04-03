@@ -33,7 +33,7 @@ Taskify has ability to store all data in the cloud, allowing users to access the
 
 
 ## Deployed Netlify link (FE)
-- https://extraordinary-cat-bbba4f.netlify.app/
+- https://heartfelt-gaufre-ebf300.netlify.app/
 
 ## Deployed Cyclic link (BE)
 - https://zany-lime-swordfish-cuff.cyclic.app/
