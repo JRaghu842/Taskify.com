@@ -380,3 +380,74 @@ margin-top: -15px;
     height: 460px !important;
     margin: auto;
 }
+
+@media screen and (min-width: 550px) and (max-width: 939px) {
+    #dataforms>div:nth-child(1){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: center;
+    }
+
+    .topbtns{
+        width: 80px;
+        /* border: 1px solid black; */
+    }
+
+    #filterByBoard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    #filterByName{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+
+
+    }
+    #searchany{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+
+
+    }
+
+    .maincontainer{
+        box-shadow: rgba(3, 79, 232, 0.25) 0px 2px 8px 0px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px 20px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    #add>input{
+        width: 86%;
+        font-size: small;
+    }
+    
+    
+    #add>select{
+        width: 100%;
+        font-size: small;
+
+ 
+    }
+
+    #dataforms>div:nth-child(3){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: center;
+    }
+  }
